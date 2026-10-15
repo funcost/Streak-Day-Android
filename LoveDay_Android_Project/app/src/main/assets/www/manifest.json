@@ -1,0 +1,13 @@
+{
+  "name": "Streak Day — Our little story",
+  "short_name": "Streak Day",
+  "description": "Đếm ngày yêu nhau, tình bạn và lưu giữ kỷ niệm.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffafd",
+  "theme_color": "#fff1f5",
+  "icons": [
+    {"src":"icon.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

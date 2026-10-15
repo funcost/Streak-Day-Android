@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff1f5">
+  <meta name="description" content="LoveDay — lưu giữ những ngày đặc biệt của hai bạn.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Streak Day — Our little story</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="LoveDay trang chủ"><span class="brand-mark">♥</span><span>love<span class="brand-pink">day</span></span></a>
+      <div class="top-actions">
+        <button class="icon-btn" id="friendsBtn" aria-label="Kết nối" title="Kết nối">♧</button>
+        <button class="icon-btn" id="inboxBtn" aria-label="Thư mời" title="Thư">✉</button>
+        <button class="icon-btn" id="chatBtn" aria-label="Tin nhắn" title="Chat">▤</button>
+        <button class="icon-btn" id="calendarBtn" aria-label="Lịch kỷ niệm" title="Lịch kỷ niệm">▦</button>
+        <button class="icon-btn" id="accountBtn" aria-label="Tài khoản" title="Tài khoản">♙</button>
+        <button class="icon-btn" id="floatBtn" aria-label="Hiển thị nổi" title="Hiển thị nổi">▣</button>
+        <button class="icon-btn" id="stopDayBtn" aria-label="Tạm dừng ngày" title="Tạm dừng ngày">Ⅱ</button>
+        <button class="icon-btn" id="settingsBtn" aria-label="Cài đặt" title="Cài đặt">⚙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="date-strip">
+        <div class="date-label">HÔM NAY LÀ</div>
+        <div class="date-number" id="todayDate">--/--/----</div>
+        <div class="live-dot"></div><span class="live-label">Cập nhật theo giờ thiết bị</span>
+      </section>
+
+      <section class="hero">
+        <div class="eyebrow">LOVE & FRIENDSHIP</div>
+        <h1 id="heroHeading">Mỗi mối quan hệ<br><span>đều có câu chuyện riêng.</span></h1>
+        <p class="hero-sub" id="heroSub">Một nơi nhỏ xinh để cất giữ những ngày đáng nhớ.</p>
+        <div class="couple-names">
+          <div class="person"><span class="person-icon">♡</span><span id="boyName">Chàng trai</span></div>
+          <div class="tiny-heart" id="relationshipSymbol">♥</div>
+          <div class="person"><span class="person-icon">♡</span><span id="girlName">Cô gái</span></div>
+        </div>
+        <div class="heart-stage" id="heartStage">
+          <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div><div class="spark spark-three">·</div>
+          <svg class="big-heart" viewBox="0 0 240 220" role="img" aria-label="Trái tim tình yêu">
+            <defs><linearGradient id="heartGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff8eae"/><stop offset="100%" stop-color="#ed4d83"/></linearGradient><filter id="heartShadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="9" flood-color="#ed4d83" flood-opacity=".23"/></filter></defs>
+            <path d="M120 199 C105 184 20 126 20 68 C20 14 84 4 120 48 C156 4 220 14 220 68 C220 126 135 184 120 199Z" fill="url(#heartGradient)" filter="url(#heartShadow)"/>
+            <path d="M49 56 C54 35 73 29 88 35" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+          </svg>
+          <div class="heart-content"><span id="friendFlame" hidden>🔥</span><strong id="daysCount">0</strong><span id="dayLabel">NGÀY BÊN NHAU</span><small id="sinceText">Từ ngày bắt đầu</small><small id="relationshipStatus"></small></div>
+        </div>
+        <div class="milestone-card">
+          <div class="milestone-icon">♡</div><div class="milestone-copy"><span class="muted">CỘT MỐC TIẾP THEO</span><strong id="nextMilestone">Ngày kỷ niệm của hai bạn</strong><small id="milestoneDate">Thêm ngày bắt đầu trong Cài đặt nhé</small></div><span class="milestone-arrow">✦</span>
+        </div>
+      </section>
+
+      <section class="quick-section">
+        <div class="section-heading"><div><span class="eyebrow">LƯU GIỮ KHOẢNH KHẮC</span><h2>Điều đặc biệt sắp tới</h2></div><button class="text-btn" id="viewCalendarBtn">Xem lịch ↗</button></div>
+        <div id="upcomingList" class="upcoming-list"><div class="empty-state">Thêm ngày kỷ niệm đầu tiên của hai bạn nhé ✨</div></div>
+      </section>
+      <footer>Made with <span>♥</span> for every little story</footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><span class="eyebrow">LOVEDAY</span><h2 id="modalTitle">Cài đặt của hai bạn</h2></div><button class="icon-btn close-btn" id="closeModal" aria-label="Đóng">×</button></div>
+      <div id="modalBody"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

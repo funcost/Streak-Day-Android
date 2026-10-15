@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Streak Day</string>
+    <string name="widget_description">Hiển thị streak trên màn hình chính</string>
+</resources>
