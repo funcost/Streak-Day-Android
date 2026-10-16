@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "115621434889",
+    "project_id": "loveday-c1462",
+    "storage_bucket": "loveday-c1462.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115621434889:android:9027e5aedc6fb58e428ad8",
+        "android_client_info": {
+          "package_name": "com.loveday.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEZvvgJRcvQeqRM-yTLefBGddsznysRqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
